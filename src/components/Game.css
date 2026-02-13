@@ -1,0 +1,92 @@
+.game-page {
+  min-height: 100vh;
+  padding: 18px 16px 28px;
+  text-align: center;
+  color: white;
+}
+
+.header h1 {
+  margin: 6px 0 8px;
+  font-size: 2rem;
+}
+
+.hud {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  font-size: 1.05rem;
+}
+
+.sep {
+  margin: 0 8px;
+  opacity: 0.7;
+}
+
+/* full width game area */
+.game {
+  width: min(1200px, calc(100vw - 32px));
+  height: 72vh;
+  min-height: 460px;
+  margin: 16px auto 0;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid hotpink;
+  border-radius: 18px;
+  background: rgba(20, 0, 31, 0.32);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.25);
+}
+
+/* falling hearts */
+.heart {
+  position: absolute;
+  font-size: 28px;
+  pointer-events: none;
+  filter: drop-shadow(0 0 10px hotpink);
+  will-change: transform;
+}
+
+/* catcher */
+.catcher {
+  position: absolute;
+  bottom: 14px;
+  height: 18px;
+  background: hotpink;
+  border-radius: 999px;
+  box-shadow: 0 0 16px hotpink;
+}
+
+/* overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlayText {
+  margin: 6px 0 12px;
+  opacity: 0.9;
+}
+
+/* buttons */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: hotpink;
+  color: white;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.85;
+}

@@ -1,0 +1,95 @@
+:root {
+    --bg-main: #fff0f3;
+    --primary: #ff4d6d;
+    --secondary: #ff8fa3;
+    --text-main: #4a1c2d;
+
+    --title-font: "Great Vibes", cursive;
+    --text-font: "Dancing Script", cursive;
+}
+
+.heeheedog {
+    width: 140px;
+    margin: 20px 0;
+    border-radius: 12px;
+}
+
+.yes-container {
+    position: relative;
+    width: 380px;
+    padding: 40px 20px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.gameIntro {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 77, 109, 0.18);
+}
+
+.gameText {
+    margin: 0 0 20px;
+    font-family: var(--text-font);
+    color: var(--text-main);
+    font-size: 1.2rem;
+    line-height: 1.35;
+
+}
+
+.playIcon {
+    width: 20px;
+    display: block;
+}
+
+.playBtn {
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+    border: 1px solid var(--secondary);
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.70);
+    color: var(--text-main);
+
+    font-family: var(--text-font);
+    font-size: 1.1rem;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+}
+
+.playBtn:hover {
+    color: white;
+    border-color: white;
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+
+
+}
+
+.gameRule {
+    margin-top: 12px;
+    padding: 10px 12px;
+    line-height: 1.35;
+
+    font-family: var(--text-font);
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: var(--text-main);
+
+    background: rgba(255, 143, 163, 0.15);
+    border: 1px solid rgba(255, 77, 109, 0.25);
+    border-radius: 12px;
+
+    box-shadow: 0 6px 18px rgba(255, 77, 109, 0.12);
+}

@@ -1,0 +1,116 @@
+:root {
+  --bg-main: #fff0f3;
+  --primary: #ff4d6d;
+  --secondary: #ff8fa3;
+  --text-main: #4a1c2d;
+
+  --title-font: "Great Vibes", cursive;
+  --text-font: "Dancing Script", cursive;
+}
+
+.win-page {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 24px;
+  text-align: center;
+  color: white;
+}
+
+.panel {
+  width: min(520px, calc(100vw - 32px));
+  padding: 24px 20px;
+  border-radius: 18px;
+
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+
+}
+
+/* Text inside panel */
+.panel h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.panel h2 {
+  margin: 0 0 14px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.panel p {
+  color: var(--primary);
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-family: var(--text-font);
+}
+
+.nextBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+
+  font-family: var(--text-font);
+  border: none;
+  padding: 12px 22px;
+  border-radius: 14px;
+
+  font-size: 1.05rem;
+  cursor: pointer;
+
+  background: var(--primary);
+  color: white;
+
+  box-shadow: 0 10px 22px rgba(255, 77, 109, 0.35);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+
+.nextBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 400px) {
+  .win-page {
+    padding: 16px;
+  }
+
+  .panel {
+    width: 100%;
+    padding: 18px 14px;
+    border-radius: 16px;
+  }
+
+  .panel h1 {
+    font-size: 1.5rem;
+  }
+
+  .panel h2 {
+    font-size: 1.05rem;
+  }
+
+  .panel p {
+    font-size: 1rem;
+  }
+
+  .nextBtn {
+    bottom: 15px;
+    right: 15px;
+    padding: 9px 16px;
+    font-size: 0.95rem;
+    border-radius: 12px;
+
+  }
+}

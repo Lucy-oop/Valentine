@@ -1,0 +1,52 @@
+/* HEART BACKGROUND LAYER */
+.hearts-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* single heart */
+.heart {
+  position: absolute;
+  bottom: -20px;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 143, 163, 0.6);
+  transform: rotate(45deg);
+  animation: floatUp linear infinite;
+}
+
+/* heart shape */
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart::before {
+  left: -5px;
+}
+
+.heart::after {
+  top: -5px;
+}
+
+/* floating animation */
+@keyframes floatUp {
+  from {
+    transform: translateY(0) rotate(45deg);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  to {
+    transform: translateY(-120vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+

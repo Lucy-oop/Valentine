@@ -1,0 +1,27 @@
+:root {
+ --bg-main: #fff0f3;      /* soft blush pink */
+--card-bg: #ffffff;
+--primary: #ff4d6d;     /* rose red */
+--secondary: #ff8fa3;   /* soft pink */
+--text-main: #4a1c2d;   /* deep wine */
+--text-light: #7a3b4c;
+--text--:'Dancing Script', cursive;
+--title--: 'Great Vibes', cursive;
+
+ 
+}
+
+
+
+body {
+  background: radial-gradient(circle at top, #ffe2ea, #fff0f3 55%, #ffd1dc);
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+
+
