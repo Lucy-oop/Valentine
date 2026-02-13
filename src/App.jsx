@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Intro from "./components/intro";
 import Yes from "./components/Yes";
@@ -14,7 +14,6 @@ function App() {
     const container = document.querySelector(".hearts-bg");
     if (!container) return;
 
-    // Clear old hearts (prevents duplicates in dev / re-renders)
     container.innerHTML = "";
 
     for (let i = 0; i < 50; i++) {
@@ -29,18 +28,15 @@ function App() {
       container.appendChild(heart);
     }
 
-    // Cleanup on unmount
     return () => {
       container.innerHTML = "";
     };
   }, []);
 
   return (
-    <BrowserRouter>
-      {/* Background hearts */}
+    <HashRouter>
       <div className="hearts-bg" />
 
-      {/* Pages */}
       <Routes>
         <Route path="/" element={<Intro />} />
         <Route path="/yes" element={<Yes />} />
@@ -49,7 +45,7 @@ function App() {
         <Route path="/present" element={<Present />} />
         <Route path="/end" element={<End />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
