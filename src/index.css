@@ -20,6 +20,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
   justify-content: center;
 }
 

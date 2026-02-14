@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Intro from "./components/intro";
@@ -7,9 +7,21 @@ import Game from "./components/Game";
 import Win from "./components/Win";
 import Present from "./components/Present";
 import End from "./components/End";
+import Loader from "./components/Loader";
 import "./App.css";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(()=> {
+    const timer = setTimeout(()=> {
+      setLoading(false);
+    },2000);
+
+    return()=> clearTimeout(timer);
+  },[]);
+
+
   useEffect(() => {
     const container = document.querySelector(".hearts-bg");
     if (!container) return;
@@ -31,7 +43,12 @@ function App() {
     return () => {
       container.innerHTML = "";
     };
-  }, []);
+  }, [loading]);
+  
+    if (loading){
+    return <Loader />;
+    }
+
 
   return (
     <HashRouter>
